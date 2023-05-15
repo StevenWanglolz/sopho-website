@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMR Calculator</title>
+  <script>
+    function calculateBMR() {
+      var weight = parseFloat(document.getElementById("weight").value);
+      var height = parseFloat(document.getElementById("height").value);
+      var age = parseFloat(document.getElementById("age").value);
+      var gender = document.getElementById("gender").value;
+      
+      var bmr = 0;
+      
+      if (gender === "male") {
+        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+      } else if (gender === "female") {
+        bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+      }
+      
+      document.getElementById("result").innerHTML = "Your BMR is: " + bmr.toFixed(2) + " calories per day.";
+    }
+  </script>
+</head>
+<body>
+  <h1>BMR Calculator</h1>
+  <label for="weight">Weight (in kilograms):</label>
+  <input type="number" id="weight" step="0.01">
+  <br>
+  <label for="height">Height (in centimeters):</label>
+  <input type="number" id="height" step="0.01">
+  <br>
+  <label for="age">Age (in years):</label>
+  <input type="number" id="age">
+  <br>
+  <label for="gender">Gender:</label>
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br>
+  <button onclick="calculateBMR()">Calculate BMR</button>
+  <br>
+  <div id="result"></div>
+</body>
+</html>
