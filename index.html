@@ -46,7 +46,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/elgato.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Steven Wang</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -89,7 +89,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/elgato.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>MIS student </h3>
@@ -298,7 +298,7 @@
 
         <div class="section-title">
           <h2>Hobbies</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>I like to listen to music, play games, and work out</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -459,11 +459,32 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Javascript effect</h2>
-          <p>This is the part where I use some Javascript effect</p>
-        </div>
-<!--
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <style>
+    #myDiv {
+      display: none;
+      padding: 20px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="toggleDiv()">Magic button</button>
+  <div id="myDiv">
+    <p>This is my javascript effect</p>
+  </div>
+
+  <script>
+    function toggleDiv() {
+      var div = document.getElementById("myDiv");
+      if (div.style.display === "none") {
+        div.style.display = "block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+
+  </script>
+        <!--<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -477,8 +498,8 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
-            </div><!-- End testimonial item 
-
+            </div><!-- End testimonial item -->
+<!--
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                 <p>
